@@ -6,7 +6,7 @@
 /*   By: jseijo-p <jseijo-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 08:51:52 by jseijo-p          #+#    #+#             */
-/*   Updated: 2022/11/01 20:52:26 by cmac             ###   ########.fr       */
+/*   Updated: 2022/11/14 17:09:52 by jseijo-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_echo(int argc, char **args)
 
 	j = 0;
 	i = 1;
+	printf("IM ft_ECHO\n");
 	if (argc > 1 && !ft_strncmp("-n", args[i], 3))
 	{
 		j = 1;

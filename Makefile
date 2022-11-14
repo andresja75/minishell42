@@ -6,13 +6,13 @@
 #    By: jseijo-p <jseijo-p@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/07 08:55:28 by jseijo-p          #+#    #+#              #
-#    Updated: 2022/11/02 21:18:01 by anramire         ###   ########.fr        #
+#    Updated: 2022/11/14 13:05:09 by jseijo-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = minishell
 
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra -g3
 
 INC_LIBFT = -I libft
 INC_READLINE = -I ~/.brew/opt/readline/include

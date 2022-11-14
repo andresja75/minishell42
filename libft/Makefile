@@ -6,7 +6,7 @@
 #    By: jseijo-p <jseijo-p@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 23:24:18 by jseijo-p          #+#    #+#              #
-#    Updated: 2022/11/01 18:21:57 by cmac             ###   ########.fr        #
+#    Updated: 2022/11/14 13:05:24 by jseijo-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= libft.a
 HEAD := -I inc/
 
 #CFLAGS = -fsanitize=address -Wall -Wextra -Werror
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3
 #CFLAGS = -fsanitize=address
 
 SRCS	=	src/maths/ft_atoi.c \
@@ -33,6 +33,7 @@ SRCS	=	src/maths/ft_atoi.c \
 				src/strings/ft_array_join.c \
 				src/strings/ft_array_len.c \
 				src/strings/ft_concat_char.c \
+				src/strings/ft_strcmp.c \
 				src/strings/ft_isalnum.c \
 				src/strings/ft_isalpha.c \
 				src/strings/ft_isascii.c \

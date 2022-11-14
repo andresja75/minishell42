@@ -6,7 +6,7 @@
 /*   By: jseijo-p <jseijo-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 20:48:21 by jseijo-p          #+#    #+#             */
-/*   Updated: 2022/11/01 18:21:51 by cmac             ###   ########.fr       */
+/*   Updated: 2022/11/14 11:35:47 by jseijo-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ void				ft_free_array(char **array);
 int					ft_isset(char const c, char const *set);
 int					ft_array_len(char **array);
 char				**ft_array_join(char **a, char **b);
+int					ft_strcmp(const char *s1, const char *s2);
 
 /*
 ** GET NEXT LINE
