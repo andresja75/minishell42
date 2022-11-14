@@ -1,0 +1,7 @@
+[
+  {
+    "files": ["**/*.c"],
+    "command": "c_formatter_42 ${srcFile}",
+    "showError": true
+  }
+]
