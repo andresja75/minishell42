@@ -6,7 +6,7 @@
 /*   By: jseijo-p <jseijo-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 09:13:22 by jseijo-p          #+#    #+#             */
-/*   Updated: 2022/11/14 17:33:35 by jseijo-p         ###   ########.fr       */
+/*   Updated: 2022/11/15 20:52:12 by anramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	exec_builtin(t_cmd *cmd)
 {
 	int	built;
-
+	ft_printf("str que llega: %s\n", cmd->args[0]);
 	built = 1;
 	if (ft_strcmp(cmd->args[0], "echo") == 0)
 		ft_echo(cmd->num_args + 1, cmd->args);

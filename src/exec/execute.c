@@ -6,7 +6,7 @@
 /*   By: jseijo-p <jseijo-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 10:53:59 by jseijo-p          #+#    #+#             */
-/*   Updated: 2022/11/02 20:55:30 by anramire         ###   ########.fr       */
+/*   Updated: 2022/11/15 20:34:52 by anramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,14 @@ static int	exe_pipes(t_model *model, t_pipes *pipes)
 		ret = exe_fdout(model, i, pipes);
 		if (ret < 0)
 			return (-1);
+
 		dup2(pipes->fdout, 1);
 		close(pipes->fdout);
+
 		childs[i] = exe_cmd(model, i);
 		i++;
 	}
+
 	kill_childs(childs, i - 1);
 	free(childs);
 	return (0);

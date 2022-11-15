@@ -6,7 +6,7 @@
 /*   By: jseijo-p <jseijo-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 08:47:01 by jseijo-p          #+#    #+#             */
-/*   Updated: 2022/11/14 17:37:26 by jseijo-p         ###   ########.fr       */
+/*   Updated: 2022/11/15 21:01:10 by anramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,17 +68,17 @@ static void	signal_handler(int signal)
 	}
 }
 
-// void	handle_sig_prnt(int sig)
-// {
-// 	if (sig == 2)
-// 	{
-// 		ft_putstr_fd("Ft_minishell: SIGINT: stopping child proccess\n", 2);
-// 	}
-// 	if (sig == 18)
-// 		ft_putstr_fd("Ft_minishell: SIGTSTP: Ctrl-D stopping child proccess\n",
-// 						2);
-// 	return ;
-// }
+void	handle_sig_prnt(int sig)
+{
+	if (sig == 2)
+	{
+		ft_putstr_fd("Ft_minishell: SIGINT: stopping child proccess\n", 2);
+	}
+	if (sig == 18)
+		ft_putstr_fd("Ft_minishell: SIGTSTP: Ctrl-D stopping child proccess\n",
+				2);
+	return ;
+}
 
 static int	check_exit(t_model *model)
 {
@@ -112,16 +112,19 @@ int	main(void)
 	{
 		print_prompt();
 		str = readline("$ ");
-		// printf("str: %s\n", str);
+		//printf("str: %s, tam: %d\n", str, (int)ft_strlen(str));
+		if(str == NULL && ft_strlen(str) == 0)
+			exit(-1);
 		if (str != NULL && ft_strlen(str) > 0)
 		{
 			parser(str, model);
 			ret = check_exit(model);
 			if (ret >= 0)
 				return (ret);
+		
+			execute(model);
+			free_model(model, 0);
 		}
-		execute(model);
-		free_model(model, 0);
 	}
 	clear_history();
 	return (0);
