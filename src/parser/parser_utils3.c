@@ -6,7 +6,7 @@
 /*   By: anramire <anramire@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:13:49 by anramire          #+#    #+#             */
-/*   Updated: 2022/11/15 21:34:13 by anramire         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:45:33 by anramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,4 +149,23 @@ void	main_loop(char *copy_str, int *i, char **str)
 	}
 	if(located == 0)
 		free(aux);
+}
+
+int check_empty_spaces(char *str)
+{
+	int	i;
+	int value;
+
+	value = -1;
+	i = 0;
+	while(str[i] != '\0')
+	{
+		if(str[i] != ' ' && (str[i] != '\t'))
+		{
+			value = 0;
+			break;
+		}
+		i++;
+	}
+	return (value);
 }

@@ -6,7 +6,7 @@
 /*   By: jseijo-p <jseijo-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 08:57:42 by jseijo-p          #+#    #+#             */
-/*   Updated: 2022/11/14 15:54:06 by jseijo-p         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:44:54 by anramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,4 +113,5 @@ void			main_loop(char *copy_str, int *i, char **str);
 int				main_scapes(char *copy_str, int *i, char **str, int scape);
 
 int				check_scapes(char **str, char *copy_str, int *i, int scape);
+int				check_empty_spaces(char *str);
 #endif

@@ -6,7 +6,7 @@
 /*   By: anramire <anramire@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 20:27:33 by anramire          #+#    #+#             */
-/*   Updated: 2022/11/15 20:04:45 by anramire         ###   ########.fr       */
+/*   Updated: 2022/11/15 21:39:53 by anramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ static void	check_command(t_cmd **new_command, char *str_aux, int *i)
 {
 	if (str_aux[*i] != ' ' && (str_aux[*i] != '\0'))
 	{
-		ft_printf("num: %d\n", (*new_command)->num_args);
 		if ((*new_command)->arg_found == 0)
 		{
 			(*new_command)->num_args += 1;

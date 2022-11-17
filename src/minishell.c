@@ -6,7 +6,7 @@
 /*   By: jseijo-p <jseijo-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 08:47:01 by jseijo-p          #+#    #+#             */
-/*   Updated: 2022/11/15 21:01:10 by anramire         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:36:20 by anramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ int	main(void)
 		//printf("str: %s, tam: %d\n", str, (int)ft_strlen(str));
 		if(str == NULL && ft_strlen(str) == 0)
 			exit(-1);
-		if (str != NULL && ft_strlen(str) > 0)
+		if (str != NULL && ft_strlen(str) > 0 && check_empty_spaces(str) != -1)
 		{
 			parser(str, model);
 			ret = check_exit(model);
